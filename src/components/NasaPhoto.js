@@ -25,9 +25,9 @@ export default function NasaPhoto() {
     return (
         <>
             <NavBar />
-            <div>
+            <div className="nasa-photo">
                 { photoData.media_type === "image" ? 
-                    (<img src={photoData.url} alt={photoData.title}/>) :
+                    (<img className="photo" src={photoData.url} alt={photoData.title}/>) :
                     (<iframe 
                         title="space-video"
                         src={photoData.url}
@@ -39,8 +39,8 @@ export default function NasaPhoto() {
                     />
                 )}
                 <h1>{photoData.title}</h1>
-                <p>{photoData.date}</p>
-                <p>{photoData.explanation}</p>
+                <p className="date">{photoData.date}</p>
+                <p className="explanation">{photoData.explanation}</p>
             </div>
         </>
     );
